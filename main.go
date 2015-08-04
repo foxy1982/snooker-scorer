@@ -16,10 +16,11 @@ func main() {
 }
 
 func CreateGame(response http.ResponseWriter, request *http.Request) {
+    gameId := Create()
     // generate new id
     // add to list of known ids
     // return id in response header
-    fmt.Fprintf(response, "Done")
+    fmt.Fprintf(response, fmt.Sprintf("%d", gameId))
 }
 
 func ListGames(response http.ResponseWriter, request *http.Request) {
